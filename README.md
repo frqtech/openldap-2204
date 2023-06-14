@@ -2,9 +2,9 @@
 
 ## 1. Introdução
 
-Este tutorial apresenta os passos necessários para se fazer a instalação do diretório OpenLDAP com o esquema brEduPerson no Ubuntu 22.04 LTS. Será utilizada a abordagem OLC (cn=config) que permite a alteração de configurações em tempo real.
+Este tutorial apresenta os passos necessários para se fazer a instalação do diretório OpenLDAP com o esquema brEduPerson no Ubuntu Server 22.04 LTS. Será utilizada a abordagem OLC (cn=config) que permite a alteração de configurações em tempo real.
 
-> ATENÇÃO: Este tutorial assume a existência de um servidor Ubuntu Server 22.04 LTS previamente configurado com o padrão RNP/CAFe.
+> ATENÇÃO: Este tutorial assume a existência de um servidor [Ubuntu Server 22.04 LTS](https://github.com/frqtech/ubuntu-2204) previamente configurado com o padrão RNP/CAFe.
 
 ## 2. Roteiro
 
