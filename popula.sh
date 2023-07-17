@@ -90,7 +90,7 @@ replace: olcAccess
 olcAccess: to attrs=userPassword,shadowLastChange by dn.base="cn=leitor-shib,${RAIZ_BASE_LDAP}" read by anonymous auth by self write by * none
 olcAccess: to dn.regex="^uid=([^,]+),ou=people,${RAIZ_BASE_LDAP}\$\$" by dn.base="cn=leitor-shib,${RAIZ_BASE_LDAP}" read by * none
 olcAccess: to dn.base="" by * read
-olcAccess: to * by dn="cn=admin,${RAIZ_BASE_LDAP}" write by * none
+olcAccess: to * by dn="cn=admin,${RAIZ_BASE_LDAP}" write by dn.base="cn=leitor-shib,${RAIZ_BASE_LDAP}" read by * none
 EOF
 
 ldapmodify -H ldapi:// -Y EXTERNAL -f /root/acls.ldif
