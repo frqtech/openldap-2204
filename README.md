@@ -85,3 +85,21 @@ wget https://raw.githubusercontent.com/frqtech/openldap-2204/main/popula.sh -O /
 chmod +x /root/popula.sh
 /root/popula.sh
 ```
+
+## 3. Acesso ao OpenLDAP
+
+3.1. Para acessar a DIT principal deve-se utilizar os seguintes parâmetros:
+
+- Hostname: IP do Servidor
+- Porta: 389
+- Bind DN: Concatenação de "cn=admin" com a Base DN. Ex.: cn=admin,dc=frqtech,dc=com,dc=br
+- Bind Password: Senha definida no item 2.1. Padrão "changeit".
+- Base DN: Conversão da varíavel ${DOMINIO-INSTITUICAO} do item 2.1 para o formato LDAP. Ex.: "frqtech.com.br" >> "dc=frqtech,dc=com,dc=br"
+
+3.2. Para acessar a DIT de configuração deve-se utilizar os seguintes parâmetros:
+
+- Hostname: IP do Servidor
+- Porta: 389
+- Bind DN: cn=admin,cn=config
+- Bind Password: Senha definida no item 2.3.
+- Base DN: cn=config
